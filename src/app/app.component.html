@@ -1,0 +1,11 @@
+<h1>Add User</h1>
+<input type="text" [(ngModel)]="newUser.name" />
+<button (click)="addUser()">add</button>
+
+<h1>All Users</h1>
+<ul>
+@for (u of allUsers; track u.id) {
+  <li>{{ u.name }}</li>
+}
+</ul>
+<router-outlet></router-outlet>
